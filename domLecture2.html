@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .myDiv {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Creates an element of h1.
+        var h1 = document.createElement("h1");
+        h1.textContent = "hello world";
+
+        document.body.appendChild(h1);
+        
+        // Creates an element of div.
+        var div = document.createElement('div');
+        
+        div.setAttribute('class', 'myDiv') /* sets styling */
+        document.body.appendChild(div);
+        
+        // Creating an h2 within the div. Both live within the body.
+        var h2 = document.createElement('h2');
+        h2.textContent = "my h2 tag";
+
+        div.appendChild(h2);
+        
+        // Creating and styling a div wihin the previous div
+        var innerDiv = document.createElement('div');
+        var anchor = document.createElement('a');
+        anchor.textContent = "Google";
+        anchor.setAttribute('href', 'https://www.google.com/');
+
+        innerDiv.appendChild(anchor);
+        div.appendChild(innerDiv);
+    </script>
+
+</body>
+</html>
