@@ -15,49 +15,49 @@ function collatz(num) {
 collatz(10)
 
 // Challenge 2
-// function largestPalendrome() {
-//    for (var i = 999; i > 899; i--) {
-//        for (var j = i; j > 899; j--) {
-//            let num = i * j;
-//            if (isPal(num)){
-//                return(num);
-//            }
-//        }
-//    }
-// }
+function largestPalendrome() {
+   for (var i = 999; i > 899; i--) {
+       for (var j = i; j > 899; j--) {
+           let num = i * j;
+           if (isPal(num)){
+               return(num);
+           }
+       }
+   }
+}
 
-// console.log(largestPalendrome());
+console.log(largestPalendrome());
 
-// function isPal(num) {
-//    palStr = num.toString().split("");
-//    for (var i = 0; i < palStr.length / 2; i++) {
-//        if (palStr[i] != palStr[palStr.length - (1 + i)]) {
-//            return false;
-//        }
-//    }
-//    return true;
-// }
+function isPal(num) {
+   palStr = num.toString().split("");
+   for (var i = 0; i < palStr.length / 2; i++) {
+       if (palStr[i] != palStr[palStr.length - (1 + i)]) {
+           return false;
+       }
+   }
+   return true;
+}
 
 // Output should be 906609
 
-// Challenge 3
-// function smallest(){
-//    var num = 2000;
-//    while (!isDivisible(num)){
-//        num++;
-//    }
-//    console.log(num);
-// }
+Challenge 3
+function smallest(){
+   var num = 2000;
+   while (!isDivisible(num)){
+       num++;
+   }
+   console.log(num);
+}
 
-// function isDivisible(num) {
-//    for (var i = 1; i < 21; i++) {
-//        if (num % i != 0) {
-//            return false;
-//        }
-//    }
-//    return true;
-// }
+function isDivisible(num) {
+   for (var i = 1; i < 21; i++) {
+       if (num % i != 0) {
+           return false;
+       }
+   }
+   return true;
+}
 
-// smallest();
+smallest();
 
 // Output should be 232792560
