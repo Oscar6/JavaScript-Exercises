@@ -40,7 +40,7 @@ function isPal(num) {
 
 // Output should be 906609
 
-Challenge 3
+// Challenge 3
 function smallest(){
    var num = 2000;
    while (!isDivisible(num)){
