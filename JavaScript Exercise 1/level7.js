@@ -14,4 +14,4 @@ function finalFunction(num){
     return emptyArray
 }
 
-console.log(finalFunction(69));
+console.log(finalFunction(3));
