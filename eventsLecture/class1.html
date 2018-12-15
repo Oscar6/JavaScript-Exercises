@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1>DigitalCrafts</h1>
+      <h2>New Account</h2>
+      <form method="post" action="/postCallback.html">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" onblur="checkUsername()" />
+        <div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+        <input type="submit" value="sign up!" />
+
+      </form>
+    </div>
+    
+    <script>
+
+  // function checkUsername(){
+
+
+      // var username = document.getElementById('username');
+      // username.onblur = function() {
+      
+      //   var msg = document.getElementById('feedback');
+      
+      //     if (username.value.length < 5) {
+      //       msg.textContent = "Username must be 5 characters or more"
+      //     }
+      //     else {
+      //       msg.textContent = '';
+      //     }
+      // }
+
+// Most common way
+      username.addEventListener('blur', function() {
+        
+          var msg = document.getElementById('feedback');
+
+            if (username.value.length < 5) {
+              msg.textContent = "Username must be 5 characters or more"
+            }
+            else {
+              msg.textContent = '';
+            }
+      })
+
+
+
+    </script>
+    </body>
+</html>

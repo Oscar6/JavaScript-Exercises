@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1>DigitalCrafts</h1>
+      <h2>Buy groceries</h2>
+      <ul id="shoppingList">
+        <li class="complete"><a href="#"><em>fresh</em> figs</a></li>
+        <li class="complete"><a href="#">pine nuts</a></li>
+        <li class="complete"><a href="#">honey</a></li>
+        <li class="complete"><a href="#">balsamic vinegar</a></li>
+      </ul>
+    </div>
+    
+    <script>
+      var shoppingList = document.getElementById('shoppingList');
+        shoppingList.addEventListener('click', function(e) {
+          
+          // console.log(e.target)
+          var target = e.target;
+          var listItem = target.parentNode;
+          var ulItem = listItem.parentNode;
+
+          ulItem.removeChild(listItem);
+
+          console.log(listItem);
+        })
+      
+    </script>
+    
+  </body>
+</html>
